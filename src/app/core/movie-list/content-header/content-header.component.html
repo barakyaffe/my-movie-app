@@ -1,0 +1,15 @@
+<div class="content-header">
+  <div class="content-header__title">Popular movies</div>
+  <div class="content-header__paging-wrapper">
+    <pagination [maxSize]="3"
+                [totalItems]="totalResults"
+                [itemsPerPage]="totalResultsPerPage"
+                [(ngModel)]="pageNumber"
+                (pageChanged)="onPageChange.emit($event)"
+                [pageBtnClass]="'paging-item'"></pagination>
+    <div class="content-header__paging-wrapper__details">
+      <span>Page no. {{pageNumber}} of {{totalPages}} pages</span>
+      <span>Total Results: {{totalResults}}</span>
+    </div>
+  </div>
+</div>

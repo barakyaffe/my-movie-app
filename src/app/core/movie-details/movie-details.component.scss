@@ -1,0 +1,18 @@
+
+:host {
+  display: block;
+  height: 100%;
+  width: 960px;
+  margin: 0 auto 50px;
+  .movie-title {
+    padding-top: 70px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .movie-overview {
+    margin: 1rem 0;
+  }
+}

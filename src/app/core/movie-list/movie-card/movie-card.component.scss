@@ -1,0 +1,40 @@
+@import '../../../../styles';
+
+:host {
+  width: 300px;
+  height: 380px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  cursor: pointer;
+  .movie-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    &__title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s, opacity 0.5s linear;
+    }
+    &:hover {
+      .movie-card__title {
+        visibility: visible;
+        opacity: 0.8;
+        height: 4rem;
+        line-height: 1rem;
+        width: 100%;
+        padding: 1.5rem 1rem;
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-align: center;
+        background: $black-2;
+      }
+    }
+  }
+}

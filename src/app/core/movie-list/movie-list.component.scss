@@ -1,0 +1,15 @@
+@import '../../../styles';
+
+:host {
+  display: block;
+  height: 100%;
+  .movie-list-wrapper {
+    margin: 0 auto 50px;
+    width: 100%;
+    max-width: 960px;
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: auto auto auto;
+    grid-gap: 15px;
+  }
+}

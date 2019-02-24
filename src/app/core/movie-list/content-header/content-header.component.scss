@@ -1,0 +1,61 @@
+@import "../../../../styles";
+
+:host {
+  display: block;
+  margin-bottom: 40px;
+  padding-top: 70px;
+  height: 220px;
+  color: $gray-2;
+  background: $black-2;
+
+  .content-header {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    max-width: 960px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__title {
+      color: $gray-3;
+      font-size: 2.25rem;
+      font-weight: 300;
+      line-height: 1.1666666667;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      word-wrap: normal;
+    }
+
+    &__paging-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &__details {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 500px;
+        font-size: 1rem;
+      }
+      /deep/ pagination {
+        ul.pagination {
+          li.page-item {
+            a.page-link {
+              color: $gray-2;
+              background: $black-2;
+              border: 1px solid $gray-2;
+            }
+            &.active {
+              a.page-link {
+                color: $gray-3;
+                border: 1px solid $gray-3;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

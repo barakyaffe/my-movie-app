@@ -1,0 +1,11 @@
+<page-header></page-header>
+<content-header [pageNumber]="page"
+                [totalPages]="total_pages"
+                [totalResults]="total_results"
+                [totalResultsPerPage]="movies.length"
+                (onPageChange)="pageChanged($event)"></content-header>
+<div class="movie-list-wrapper">
+  <movie-card *ngFor="let m of movies"
+              [movie]="m"
+              [routerLink]="['/movie-details', m.id]"></movie-card>
+</div>
