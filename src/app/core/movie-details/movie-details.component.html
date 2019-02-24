@@ -2,11 +2,10 @@
 <h1 *ngIf="movie?.title" class="movie-title" title="{{movie.title}}">{{movie.title}}</h1>
 <carousel [interval]="1500" [showIndicators]="false">
   <slide *ngFor="let b of backdrops">
-    <img [src]="'https://image.tmdb.org/t/p/w780/' + b.file_path"
-         style="display: block; width: 100%;">
+    <img [src]="'https://image.tmdb.org/t/p/w780/' + b.file_path" class="movie-image">
   </slide>
 </carousel>
 <p *ngIf="movie?.overview" class="movie-overview">{{movie.overview}}</p>
 <p *ngIf="movie?.spoken_languages">
-  ( Spoken languages:<span *ngFor="let l of movie.spoken_languages">{{movie.spoken_languages.indexOf(l) === movie.spoken_languages.length -1 ? l.name : l.name + ', '}}</span> )
+  ( Spoken languages: <span *ngFor="let l of movie.spoken_languages">{{movie.spoken_languages.indexOf(l) === movie.spoken_languages.length -1 ? l.name : l.name + ', '}}</span> )
 </p>
